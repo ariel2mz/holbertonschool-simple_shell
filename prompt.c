@@ -5,12 +5,12 @@
  *
  *
  */
-int main(void)
+int main(int ac, char **av, char **env)
 {
 	char *line = NULL;
 	size_t len = 0;
 	ssize_t nread;
-	int palabras;
+	char **token;
 
 	while(1)
 	{
@@ -19,8 +19,9 @@ int main(void)
 
 		if (nread != -1)
 		{
-			palabras = contar(line);
-			printf("%d",palabras);
+			line[len - 1] = '\0';
+			token = tokenizar(line);
+			comando (token, env);
 		}
 	}
 }
