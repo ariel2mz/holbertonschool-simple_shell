@@ -15,6 +15,8 @@ void comando(char **token, char **env)
 	}
 	else if (pid == 0)
 	{
+		printf("%s",token[0]);
+		printf("sd");
 		execve(token[0], token, env);
 	}
 	else

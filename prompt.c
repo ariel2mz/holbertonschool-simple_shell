@@ -17,11 +17,13 @@ int main(int ac, char **av, char **env)
 		printf("$ ");
 		nread = getline(&line, &len, stdin);
 
-		if (nread != -1)
+		if (nread == -1)
 		{
-			line[len - 1] = '\0';
-			token = tokenizar(line);
-			comando (token, env);
+			free(line);
+			break;
 		}
+		token = tokenizar(line);
+		comando(token, env);
+		
 	}
 }
