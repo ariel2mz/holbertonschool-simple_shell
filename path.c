@@ -10,6 +10,7 @@ extern char **environ;
 char *pathfinder(char *command)
 {
 	int i = 0;
+	char **token;
 
 	while(environ[i])
 	{
@@ -19,11 +20,17 @@ char *pathfinder(char *command)
 			{
 				if(environ[i][2] == 'T')
 				{
-					printf("%s", environ[i]);
+					token = tokenizar_path(environ[i]);
 				}
 			}
 		}
 		i++;
+	}
+	i = 0;
+	while(token[i])
+	{
+	printf("%s", token[i]);
+	i++;
 	}
 	return(environ[0]);
 }

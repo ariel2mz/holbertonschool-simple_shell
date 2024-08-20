@@ -12,7 +12,7 @@ char ** tokenizar_path(char *linea)
 	int palabras = 0;
 	int i = 0;
 
-	palabras = contar(linea);
+	palabras = contar_path(linea);
 
 	token = malloc(sizeof(char*)*(palabras + 1));
 
