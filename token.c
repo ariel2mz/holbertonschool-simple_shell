@@ -16,11 +16,11 @@ char ** tokenizar(char *linea)
 	
 	token = malloc(sizeof(char*)*(palabras + 1));
 	
-	token[0] = strtok(linea, " \n");
+	token[0] = strtok(linea, DELIMITATORS);
 
 	for (i = 1; i < palabras; i++)
 	{
-		token[i] = strtok(NULL, " \n");
+		token[i] = strtok(NULL, DELIMITATORS);
 	}
 	token[palabras] = NULL;
 

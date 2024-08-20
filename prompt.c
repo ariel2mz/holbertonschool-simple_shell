@@ -24,6 +24,7 @@ int main(int ac, char **av, char **env)
 		}
 		token = tokenizar(line);
 		comando(token, env);
+		pathfinder(token[0]);
 		
 	}
 }
