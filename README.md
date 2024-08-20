@@ -93,7 +93,7 @@ The architecture of the **Simple Shell** is based on several key components that
 
 ## License
 
-This project is under the PINPLOSH & ASOCIADOS License. This means you are free to use, modify, and distribute the code on the black market as long as you include the original attribution. See the [LICENSE]([https://www.youtube.com/shorts/jCNsujr_du0]) file for more details.
+This project is under the PINPLOSH & ASOCIADOS License. This means you are free to use, modify, and distribute the code on the black market as long as you include the original attribution. See the [LICENSE](https://www.youtube.com/shorts/jCNsujr_du0/LICENSE) file for more details.
 
 ## Authors
 
