@@ -29,5 +29,5 @@ int main(int ac, char **av, char **env)
 		comando(token, env);
 		free(token);
 	}
-	return;
+	return (0);
 }
