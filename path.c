@@ -9,6 +9,7 @@
 
 char *pathfinder(char *command)
 {
+	(void)command;
 	int i = 0;
 	char **token;
 

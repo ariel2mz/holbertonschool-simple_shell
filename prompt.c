@@ -7,6 +7,8 @@
  */
 int main(int ac, char **av, char **env)
 {
+	(void)ac;
+	(void)av;
 	char *line = NULL;
 	size_t len = 0;
 	ssize_t nread;
