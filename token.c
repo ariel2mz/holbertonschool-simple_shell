@@ -1,7 +1,10 @@
 #include "main.h"
 
 /**
- *
+ * tokenizar - tokenizar
+ * @linea: line tokenizar - tokenizar
+ * @linea: linea
+ * Return: token
  *
  *
  */
