@@ -16,6 +16,7 @@ int main(int ac, char **av, char **env)
 	ssize_t nread;
 	char **token;
 	int builtinn;
+	int status = 0;
 	(void)ac;
 	(void)av;
 
@@ -44,7 +45,7 @@ int main(int ac, char **av, char **env)
 		}
 		else if (builtinn != 2)
 		{
-		comando(token, env);
+		status = comando(token, env);
 		free(token);
 		}
 		}
