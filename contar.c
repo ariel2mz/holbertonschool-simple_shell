@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- *
- *
- *
+ * contar - contar contar
+ * @linea: linea
+ * Return: contador
  */
 
 int contar(char *linea)

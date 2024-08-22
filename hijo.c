@@ -1,8 +1,9 @@
 #include "main.h"
 
 /**
- *
- *
+ * comando - comando
+ * @token: env
+ * @env: env
  */
 void comando(char **token, char **env)
 {

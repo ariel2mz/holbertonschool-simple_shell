@@ -2,9 +2,9 @@
 
 
 /**
- *
- *
- *
+ * pathfinder - pathfinder
+ * @command: command
+ * Return: environ
  */
 
 char *pathfinder(char *command)
@@ -12,7 +12,7 @@ char *pathfinder(char *command)
 	int i = 0;
 	char **token;
 	(void)command;
-	
+
 	while (environ[i])
 	{
 		if (environ[i][0] == 'P')
