@@ -8,6 +8,7 @@ void comando(char **token, char **env)
 {
 	pid_t pid = fork();
 	int status = 0;
+	struct stat fileStat;
 
 	if (pid < 0)
 	{
@@ -15,9 +16,11 @@ void comando(char **token, char **env)
 	}
 	else if (pid == 0)
 	{
-		printf("%s",token[0]);
-		printf("sd");
+		if(stat(token[0], &fileStat) == 0){
 		execve(token[0], token, env);
+		}
+		else
+		printf("Comando no encontrado");
 	}
 	else
 	{

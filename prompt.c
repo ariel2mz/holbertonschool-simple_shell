@@ -12,7 +12,7 @@ int main(int ac, char **av, char **env)
 	ssize_t nread;
 	char **token;
 
-	while(1)
+	while (1)
 	{
 		printf("$ ");
 		nread = getline(&line, &len, stdin);
@@ -24,7 +24,6 @@ int main(int ac, char **av, char **env)
 		}
 		token = tokenizar(line);
 		comando(token, env);
-		pathfinder(token[0]);
-		
+		free(token);
 	}
 }

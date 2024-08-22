@@ -13,7 +13,7 @@ int contar(char *linea)
 
 	while (linea[i] != '\0')
 	{
-		if (linea[i] == ' ')
+		if (linea[i] == ' ' || linea[i] == ':')
 		{
 			contador++;
 		}

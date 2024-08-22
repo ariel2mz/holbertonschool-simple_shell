@@ -7,9 +7,10 @@
 #include <string.h>
 #include <stddef.h>
 #include <sys/wait.h>
+#include <sys/stat.h>
 
-#define DELIMITATORS " \n\t\r"
-
+#define DELIMITATORS " \n\t\r:"
+extern char **environ;
 int contar(char *linea);
 char ** tokenizar(char *linea);
 void comando(char **token, char **env);
