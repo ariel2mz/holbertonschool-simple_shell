@@ -22,6 +22,7 @@ int builtin(char *linea)
 				}
 				free(linea);
 			}
+	return (0);
 }
 /**
  * contar - contar contar
