@@ -12,9 +12,9 @@
 #define DELIMITATORS " \n\t\r:"
 extern char **environ;
 int contar(char *linea);
-char ** tokenizar(char *linea);
+char **tokenizar(char *linea);
 void comando(char **token, char **env);
 char *pathfinder(char *command);
-char ** tokenizar_path(char *linea);
+char **tokenizar_path(char *linea);
 int contar_path(char *linea);
 #endif

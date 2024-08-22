@@ -11,19 +11,14 @@ void comando(char **token, char **env)
 	struct stat fileStat;
 
 	if (pid < 0)
-	{
 		printf("error");
-	}
 	else if (pid == 0)
 	{
-		if(stat(token[0], &fileStat) == 0){
-		execve(token[0], token, env);
-		}
+		if (stat(token[0], &fileStat) == 0)
+			execve(token[0], token, env);
 		else
-		printf("Comando no encontrado");
+			printf("Comando no encontrado");
 	}
 	else
-	{
 		wait(&status);
-	}
 }
