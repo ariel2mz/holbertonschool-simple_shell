@@ -8,7 +8,7 @@ int builtin(char *linea)
 			if (linea[2] == 'i')
 				if (linea[3] == 't')
 					{
-				 	exit(0);
+				 	return (1);
 					}
 	if (linea[0] == 'e')
 		if (linea[1] == 'n')
@@ -19,6 +19,7 @@ int builtin(char *linea)
 					printf("%s\n", environ[i]);
 					i++;
 				}
+				return (2);
 			}
 	return (0);
 }

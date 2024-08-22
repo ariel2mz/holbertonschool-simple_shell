@@ -15,6 +15,7 @@ int main(int ac, char **av, char **env)
 	size_t len = 0;
 	ssize_t nread;
 	char **token;
+	int builtinn;
 	(void)ac;
 	(void)av;
 
@@ -34,9 +35,17 @@ int main(int ac, char **av, char **env)
 		if (esvacio(line) == 1)
 		{
 		token = tokenizar(line);
-		builtin(token[0]);
+		builtinn = builtin(token[0]);
+		if (builtinn == 1)
+		{
+			free(token);
+			exit(0);
+		}
+		else if (builtinn != 2)
+		{
 		comando(token, env);
 		free(token);
+		}
 		}
 	}
 	return (0);
