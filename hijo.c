@@ -5,7 +5,7 @@
  * @token: env
  * @env: env
  */
-void comando(char **token, char **env)
+int comando(char **token, char **env)
 {
 	pid_t pid;
 	int status = 0;
@@ -23,5 +23,7 @@ void comando(char **token, char **env)
 }
 else {
 	printf("Comando no encontrado\n");
+	return (2);
 }
+return (0);
 }
