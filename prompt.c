@@ -24,7 +24,7 @@ int main(int ac, char **av, char **env)
 		printf("$ ");
 		}
 		nread = getline(&line, &len, stdin);
-
+		
 		if (nread == -1)
 		{
 			free(line);
@@ -34,6 +34,7 @@ int main(int ac, char **av, char **env)
 		if (esvacio(line) == 1)
 		{
 		token = tokenizar(line);
+		builtin(token[0]);
 		comando(token, env);
 		free(token);
 		}

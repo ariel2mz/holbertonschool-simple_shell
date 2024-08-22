@@ -18,4 +18,5 @@ char *pathfinder(char *command);
 char **tokenizar_path(char *linea);
 int contar_path(char *linea);
 int esvacio(char *linea);
+int builtin(char *linea);
 #endif
