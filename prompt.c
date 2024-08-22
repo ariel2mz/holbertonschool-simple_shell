@@ -20,7 +20,9 @@ int main(int ac, char **av, char **env)
 
 	while (1)
 	{
+		if (isatty(STDIN_FILENO)) {
 		printf("$ ");
+		}
 		nread = getline(&line, &len, stdin);
 
 		if (nread == -1)
