@@ -39,6 +39,7 @@ int main(int ac, char **av, char **env)
 		if (builtinn == 1)
 		{
 			free(token);
+			free(line);
 			exit(0);
 		}
 		else if (builtinn != 2)
