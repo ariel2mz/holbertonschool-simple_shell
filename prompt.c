@@ -30,9 +30,13 @@ int main(int ac, char **av, char **env)
 			free(line);
 			break;
 		}
+		
+		if (esvacio(line) == 1)
+		{
 		token = tokenizar(line);
 		comando(token, env);
 		free(token);
+		}
 	}
 	return (0);
 }

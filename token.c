@@ -1,6 +1,24 @@
 #include "main.h"
 
-/**
+int esvacio(char *linea)
+{
+
+	int i = 0;
+	int letras = 0;
+	while (linea[i] != '\0')
+	{
+		if (linea[i] <= 122 && linea[i] >= 97)
+		{
+			letras++;
+		}
+		i++;
+	}
+	if (letras > 0)
+	return (1);
+	else
+	return (-1);
+}
+/*
  * tokenizar - tokenizar
  * @linea: line tokenizar - tokenizar
  * @linea: linea
